@@ -1,0 +1,17 @@
+# EasyEssentials Message Configuration
+# Placeholders:
+# {player} - The name of the player
+# {gamemode} - The gamemode name
+# {sender} - The name of the sender
+
+messages:
+  gm:
+    usage: "&cUsage: /gm <0|1|2|3|survival|creative|adventure|spectator> [player]"
+    invalid-mode: "&cInvalid gamemode. Use: 0/survival, 1/creative, 2/adventure, 3/spectator."
+    no-permission: "&cYou don't have permission to use this command."
+    no-permission-other: "&cYou don't have permission to change other players' gamemode."
+    player-not-found: "&cPlayer '&e{player}&c' not found or is offline."
+    console-no-player: "&cConsole must specify a player: /gm <mode> <player>"
+    self-changed: "&aYour gamemode has been set to &e{gamemode}&a."
+    other-changed-sender: "&aChanged gamemode of &e{player}&a to &e{gamemode}&a."
+    other-changed-target: "&aYour gamemode has been changed to &e{gamemode}&a by &e{sender}&a."
