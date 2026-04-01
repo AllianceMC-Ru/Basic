@@ -5,13 +5,36 @@
 # {sender} - The name of the sender
 
 messages:
-  gm:
-    usage: "&cUsage: /gm <0|1|2|3|survival|creative|adventure|spectator> [player]"
-    invalid-mode: "&cInvalid gamemode. Use: 0/survival, 1/creative, 2/adventure, 3/spectator."
-    no-permission: "&cYou don't have permission to use this command."
-    no-permission-other: "&cYou don't have permission to change other players' gamemode."
-    player-not-found: "&cPlayer '&e{player}&c' not found or is offline."
-    console-no-player: "&cConsole must specify a player: /gm <mode> <player>"
-    self-changed: "&aYour gamemode has been set to &e{gamemode}&a."
-    other-changed-sender: "&aChanged gamemode of &e{player}&a to &e{gamemode}&a."
-    other-changed-target: "&aYour gamemode has been changed to &e{gamemode}&a by &e{sender}&a."
+    basic:
+        usage: "&cUsage: /basic reload"
+        no-permission: "&cYou don't have permission to use this command."
+        reload-success: "&aConfiguration reloaded successfully."
+
+    gm:
+        usage: "&cUsage: /gm <0|1|2|3|survival|creative|adventure|spectator> [player]"
+        invalid-mode: "&cInvalid gamemode. Use: 0/survival, 1/creative, 2/adventure, 3/spectator."
+        no-permission: "&cYou don't have permission to use this command."
+        no-permission-other: "&cYou don't have permission to change other players' gamemode."
+        player-not-found: "&cPlayer '&e{player}&c' not found or is offline."
+        console-no-player: "&cConsole must specify a player: /gm <mode> <player>"
+        self-changed: "&aYour gamemode has been set to &e{gamemode}&a."
+        other-changed-sender: "&aChanged gamemode of &e{player}&a to &e{gamemode}&a."
+        other-changed-target: "&aYour gamemode has been changed to &e{gamemode}&a by &e{sender}&a."
+
+    fly:
+        no-permission: "&cYou don't have permission to use this command."
+        no-permission-other: "&cYou don't have permission to toggle fly for other players."
+        console-no-player: "&cConsole must specify a player: /fly <player>"
+        player-not-found: "&cPlayer '&e{player}&c' not found or is offline."
+        world-not-allowed: "&cYou can't use fly in this world."
+        self-toggled: "&aFly {state}&a."
+        other-toggled-sender: "&aFly for &e{player}&a has been {state}&a."
+        other-toggled-target: "&aYour fly has been {state}&a by &e{sender}&a."
+        state-enabled: "&aenabled"
+        state-disabled: "&cdisabled"
+
+# List of worlds where players with basic.fly.worlds permission can use /fly
+fly:
+    allowed-worlds:
+        - lobby
+        - spawn

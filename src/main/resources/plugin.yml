@@ -5,15 +5,34 @@ author: [preston]
 description: Light-Weight Essentials plugin without uneccessary stuff of original plugin.
 
 commands:
-  gm:
-    description: Shortcut for /gamemode command.
-    usage: /gm <0|1|2|3|survival|creative|adventure|spectator> [player]
-    permission: basic.gm
+    gm:
+        description: Shortcut for /gamemode command.
+        usage: /gm <0|1|2|3|survival|creative|adventure|spectator> [player]
+
+    fly:
+        description: Toggle flight mode.
+        usage: /fly [player]
+
+    basic:
+        description: Main plugin command.
+        usage: /basic reload
 
 permissions:
-  basic.gm:
-    description: Allows the player to change their own gamemode via /gm.
-    default: op
-  basic.gm.other:
-    description: Allows the player to change another player's gamemode via /gm.
-    default: op
+    basic.gm:
+        description: Allows the player to change their own gamemode via /gm.
+        default: op
+    basic.gm.other:
+        description: Allows the player to change another player's gamemode via /gm.
+        default: op
+    basic.fly:
+        description: Allows the player to toggle fly for themselves in all worlds.
+        default: op
+    basic.fly.other:
+        description: Allows the player to toggle fly for other players.
+        default: op
+    basic.fly.worlds:
+        description: Allows the player to toggle fly only in configured worlds.
+        default: false
+    basic.reload:
+        description: Allows the player to reload the plugin configuration.
+        default: op

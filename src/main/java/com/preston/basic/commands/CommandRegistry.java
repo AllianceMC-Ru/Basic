@@ -1,6 +1,7 @@
 package com.preston.basic.commands;
 
 import com.preston.basic.Basic;
+import com.preston.basic.commands.FlyCommand;
 import com.preston.basic.utils.Messages;
 import org.bukkit.command.PluginCommand;
 
@@ -16,6 +17,18 @@ public class CommandRegistry {
 
     public void registerAll() {
         registerGamemodeCommands();
+        registerFlyCommand();
+        registerBasicCommand();
+    }
+
+    private void registerFlyCommand() {
+        FlyCommand flyCommand = new FlyCommand(messages);
+        register("fly", flyCommand);
+    }
+
+    private void registerBasicCommand() {
+        BasicCommand basicCommand = new BasicCommand(plugin, messages);
+        register("basic", basicCommand);
     }
 
     private void registerGamemodeCommands() {
@@ -26,9 +39,13 @@ public class CommandRegistry {
     private void register(String commandName, Object handler) {
         PluginCommand command = plugin.getCommand(commandName);
         if (command == null) {
-            plugin.getLogger().warning(
-                "Command '/" + commandName + "' is not defined in plugin.yml — skipping registration."
-            );
+            plugin
+                .getLogger()
+                .warning(
+                    "Command '/" +
+                        commandName +
+                        "' is not defined in plugin.yml — skipping registration."
+                );
             return;
         }
 
