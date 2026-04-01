@@ -1,6 +1,6 @@
-name: EasyEssentials
+name: Basic
 version: ${project.version}
-main: com.preston.essentials.Essentials
+main: com.preston.basic.Basic
 author: [preston]
 description: Light-Weight Essentials plugin without uneccessary stuff of original plugin.
 
@@ -8,12 +8,12 @@ commands:
   gm:
     description: Shortcut for /gamemode command.
     usage: /gm <0|1|2|3|survival|creative|adventure|spectator> [player]
-    permission: easyessentials.gm
+    permission: basic.gm
 
 permissions:
-  easyessentials.gm:
+  basic.gm:
     description: Allows the player to change their own gamemode via /gm.
     default: op
-  easyessentials.gm.other:
+  basic.gm.other:
     description: Allows the player to change another player's gamemode via /gm.
     default: op

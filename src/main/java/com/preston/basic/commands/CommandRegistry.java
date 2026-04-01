@@ -1,15 +1,15 @@
-package com.preston.essentials.commands;
+package com.preston.basic.commands;
 
-import com.preston.essentials.Essentials;
-import com.preston.essentials.utils.Messages;
+import com.preston.basic.Basic;
+import com.preston.basic.utils.Messages;
 import org.bukkit.command.PluginCommand;
 
 public class CommandRegistry {
 
-    private final Essentials plugin;
+    private final Basic plugin;
     private final Messages messages;
 
-    public CommandRegistry(Essentials plugin, Messages messages) {
+    public CommandRegistry(Basic plugin, Messages messages) {
         this.plugin = plugin;
         this.messages = messages;
     }

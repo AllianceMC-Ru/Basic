@@ -1,13 +1,13 @@
-package com.preston.essentials.utils;
+package com.preston.basic.utils;
 
-import com.preston.essentials.Essentials;
+import com.preston.basic.Basic;
 import org.bukkit.ChatColor;
 
 public class Messages {
 
-    private final Essentials plugin;
+    private final Basic plugin;
 
-    public Messages(Essentials plugin) {
+    public Messages(Basic plugin) {
         this.plugin = plugin;
     }
 

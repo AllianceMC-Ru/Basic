@@ -1,12 +1,12 @@
-package com.preston.essentials;
+package com.preston.basic;
 
-import com.preston.essentials.commands.CommandRegistry;
-import com.preston.essentials.utils.Messages;
+import com.preston.basic.commands.CommandRegistry;
+import com.preston.basic.utils.Messages;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Essentials extends JavaPlugin {
+public class Basic extends JavaPlugin {
 
-    private static Essentials instance;
+    private static Basic instance;
     private Messages messages;
 
     @Override
@@ -27,7 +27,7 @@ public class Essentials extends JavaPlugin {
         instance = null;
     }
 
-    public static Essentials getInstance() {
+    public static Basic getInstance() {
         return instance;
     }
 

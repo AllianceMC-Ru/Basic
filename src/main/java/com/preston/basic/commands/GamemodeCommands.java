@@ -1,6 +1,6 @@
-package com.preston.essentials.commands;
+package com.preston.basic.commands;
 
-import com.preston.essentials.utils.Messages;
+import com.preston.basic.utils.Messages;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
